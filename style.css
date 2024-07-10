@@ -1,0 +1,71 @@
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-image: conic-gradient(at right center, rgb(199,210,254),rgb(71,85,105),rgb(199,210,254));
+}
+
+h1{
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+}
+
+
+.battery-top{
+    width: 30px;
+    height: 10px;
+    background: black;
+    margin: 0 auto;
+    border: 3px solid white;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+.battery-content{
+    width: 150px;
+    height: 250px;
+    background: black;
+    position: relative;
+    margin: 0 auto;
+    border: 3px solid white;
+    border-radius: 18px;
+}
+
+.charging-percent{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    border-radius: 14px;
+    animation: charging 8s linear infinite;
+}
+
+@keyframes charging{
+    0%{
+        height: 0%;
+        background: red;
+    }
+    25%{
+        height: 25%;
+        background: orange;
+    }
+    50%{
+        height: 50%;
+        background: yellow;
+    }
+    75%{
+        height: 75%;
+        background: lightgreen;
+    }
+    100%{
+        height: 100%;
+        background: green;
+    }
+}
